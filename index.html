@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Analytics Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dashboard">
+    <h2>📦 Inventory Analytics Dashboard</h2>
+    <p>Powered by <code>Object.keys()</code>, <code>Object.values()</code>, and <code>Object.entries()</code></p>
+
+    <!-- Stat Cards generated using Object.keys() & Object.values() -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <small>Total Products (Object.keys)</small>
+        <h3 id="totalProducts">0</h3>
+      </div>
+      <div class="stat-card">
+        <small>Total Stock Count (Object.values)</small>
+        <h3 id="totalStock">0</h3>
+      </div>
+      <div class="stat-card">
+        <small>Total Value (Object.values + reduce)</small>
+        <h3 id="totalValue">$0</h3>
+      </div>
+    </div>
+
+    <!-- Table rendered using Object.entries() -->
+    <div class="table-container">
+      <h3>Product List (Object.entries)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Total Value</th>
+          </tr>
+        </thead>
+        <tbody id="inventoryTable">
+          <!-- Rows will be injected by JS -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
